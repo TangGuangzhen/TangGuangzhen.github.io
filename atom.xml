@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://tangguangzhen.github.io/"/>
   <updated>2019-07-04T04:25:16.216Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://tangguangzhen.github.io/</id>
   
   <author>
     <name>tgz</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo博客搭建</title>
-    <link href="http://yoursite.com/2019/07/02/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2019/07/02/Hexo博客搭建/</id>
+    <link href="https://tangguangzhen.github.io/2019/07/02/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>https://tangguangzhen.github.io/2019/07/02/Hexo博客搭建/</id>
     <published>2019-07-02T12:52:07.000Z</published>
     <updated>2019-07-04T04:25:16.216Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://tangguangzhen.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://tangguangzhen.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/07/02/hello-world/"/>
-    <id>http://yoursite.com/2019/07/02/hello-world/</id>
+    <link href="https://tangguangzhen.github.io/2019/07/02/hello-world/"/>
+    <id>https://tangguangzhen.github.io/2019/07/02/hello-world/</id>
     <published>2019-07-02T12:40:44.048Z</published>
     <updated>2019-07-02T14:41:19.995Z</updated>
     
