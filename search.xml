@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node.js的安装]]></title>
+    <url>%2F2019%2F07%2F05%2Fnode-js%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[Node.JS 的安装本文将向大家介绍在window安装Node.js的方法。 本安装教程以Node.js v4.4.3 LTS(长期支持版本)版本为例。 Node.js安装包及源码下载地址为：https://nodejs.org/en/download/。 ![](./1562311144353.png) 你可以根据不同平台系统选择你需要的Node.js安装包。 Node.js 历史版本下载地址：https://nodejs.org/dist/ ##Window 上安装Node.jsWindows 安装包(.msi) 32 位安装包下载地址 : https://nodejs.org/dist/v4.4.3/node-v4.4.3-x86.msi 64 位安装包下载地址 : https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi 本文实例以 v0.10.26 版本为例，其他版本类似， 安装步骤： 步骤 1 : 双击下载后的安装包 v0.10.26，如下所示： ![Alt text](./1562311339082.png) 步骤 2 : 点击以上的Run(运行)，将出现如下界面： ![Alt text](./1562311352524.png) 步骤 3 : 勾选接受协议选项，点击 next（下一步） 按钮 : ![Alt text](./1562311367321.png) 步骤 4 : Node.js默认安装目录为 “C:\Program Files\nodejs\” , 你可以修改目录，并点击 next（下一步）： ![Alt text](./1562311378566.png) 步骤 5 : 点击树形图标来选择你需要的安装模式 , 然后点击下一步 next（下一步） ![Alt text](./1562311395679.png) 步骤 6 :点击 Install（安装） 开始安装Node.js。你也可以点击 Back（返回）来修改先前的配置。 然后并点击 next（下一步）： ![Alt text](./1562311412011.png) 安装过程： ![Alt text](./1562311429002.png) 点击 Finish（完成）按钮退出安装向导。 ![Alt text](./1562311455538.png) 检测PATH环境变量是否配置了Node.js，点击开始=》运行=》输入”cmd” =&gt; 输入命令”path”，输出如下结果： PATH=C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Windows\system32; C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\; c:\python32\python;C:\MinGW\bin;C:\Program Files\GTK2-Runtime\lib; C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\nodejs\; C:\Users\rg\AppData\Roaming\npm我们可以看到环境变量中已经包含了C:\Program Files\nodejs检查Node.js版本]]></content>
+      <categories>
+        <category>node.js</category>
+      </categories>
+      <tags>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo博客搭建]]></title>
     <url>%2F2019%2F07%2F02%2FHexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"><![CDATA[如果你和我一样是小白，从来没搭建过博客。那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！ 1. 准备环境2. 搭建本地个人博客]]></content>
+    <content type="text"><![CDATA[如果你和我一样是小白，从来没搭建过博客。那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！ 准备环境搭建本地个人博客]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F07%2F02%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>

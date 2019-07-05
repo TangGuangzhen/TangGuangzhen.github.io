@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangguangzhen.github.io/"/>
-  <updated>2019-07-04T04:25:16.216Z</updated>
+  <updated>2019-07-05T07:42:54.567Z</updated>
   <id>https://tangguangzhen.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>node.js的安装</title>
+    <link href="https://tangguangzhen.github.io/2019/07/05/node-js%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    <id>https://tangguangzhen.github.io/2019/07/05/node-js的安装/</id>
+    <published>2019-07-05T07:40:22.000Z</published>
+    <updated>2019-07-05T07:42:54.567Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="Node-JS-的安装"><a href="#Node-JS-的安装" class="headerlink" title="Node.JS 的安装"></a>Node.JS 的安装</h1><p>本文将向大家介绍在window安装Node.js的方法。</p><p>本安装教程以Node.js v4.4.3 LTS(长期支持版本)版本为例。</p><p>Node.js安装包及源码下载地址为：<a href="https://nodejs.org/en/download/。" target="_blank" rel="noopener">https://nodejs.org/en/download/。</a></p><div align="center">![](./1562311144353.png)<p>你可以根据不同平台系统选择你需要的Node.js安装包。</p><p>Node.js 历史版本下载地址：<a href="https://nodejs.org/dist/" target="_blank" rel="noopener">https://nodejs.org/dist/</a></p><p>##Window 上安装Node.js<br>Windows 安装包(.msi)</p><p>32 位安装包下载地址 : <a href="https://nodejs.org/dist/v4.4.3/node-v4.4.3-x86.msi" target="_blank" rel="noopener">https://nodejs.org/dist/v4.4.3/node-v4.4.3-x86.msi</a></p><p>64 位安装包下载地址 : <a href="https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi" target="_blank" rel="noopener">https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi</a></p><p>本文实例以 v0.10.26 版本为例，其他版本类似， 安装步骤：</p><p>步骤 1 : 双击下载后的安装包 v0.10.26，如下所示：</p><div align="center">![Alt text](./1562311339082.png)<p>步骤 2 : 点击以上的Run(运行)，将出现如下界面：</p><div align="center">![Alt text](./1562311352524.png)<p>步骤 3 : 勾选接受协议选项，点击 next（下一步） 按钮 :</p><div align="center">![Alt text](./1562311367321.png)<p>步骤 4 : Node.js默认安装目录为 “C:\Program Files\nodejs\” , 你可以修改目录，并点击 next（下一步）：</p><div align="center">![Alt text](./1562311378566.png)步骤 5 : 点击树形图标来选择你需要的安装模式 , 然后点击下一步 next（下一步）<div align="center">![Alt text](./1562311395679.png)<p>步骤 6 :点击 Install（安装） 开始安装Node.js。你也可以点击 Back（返回）来修改先前的配置。 然后并点击 next（下一步）：</p><div align="center">![Alt text](./1562311412011.png)<p>安装过程：</p><div align="center">![Alt text](./1562311429002.png)<p>点击 Finish（完成）按钮退出安装向导。</p><div align="center">![Alt text](./1562311455538.png)<p>检测PATH环境变量是否配置了Node.js，点击开始=》运行=》输入”cmd” =&gt; 输入命令”path”，输出如下结果：</p><pre><code>PATH=C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\python32\python;C:\MinGW\bin;C:\Program Files\GTK2-Runtime\lib;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\nodejs\;C:\Users\rg\AppData\Roaming\npm</code></pre><p>我们可以看到环境变量中已经包含了C:\Program Files\nodejs<br>检查Node.js版本<br><img src="./1562311487409.png" alt="Alt text"></p></div></div></div></div></div></div></div></div></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Node-JS-的安装&quot;&gt;&lt;a href=&quot;#Node-JS-的安装&quot; class=&quot;headerlink&quot; title=&quot;Node.JS 的安装&quot;&gt;&lt;/a&gt;Node.JS 的安装&lt;/h1&gt;&lt;p&gt;本文将向大家介绍在window安
+      
+    
+    </summary>
+    
+      <category term="node.js" scheme="https://tangguangzhen.github.io/categories/node-js/"/>
+    
+    
+      <category term="node.js" scheme="https://tangguangzhen.github.io/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo博客搭建</title>
     <link href="https://tangguangzhen.github.io/2019/07/02/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     <id>https://tangguangzhen.github.io/2019/07/02/Hexo博客搭建/</id>
     <published>2019-07-02T12:52:07.000Z</published>
-    <updated>2019-07-04T04:25:16.216Z</updated>
+    <updated>2019-07-05T07:42:26.391Z</updated>
     
-    <content type="html"><![CDATA[<p>如果你和我一样是小白，从来没搭建过博客。那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！</p><a id="more"></a><h2 id="1-准备环境"><a href="#1-准备环境" class="headerlink" title="1. 准备环境"></a>1. 准备环境</h2><h2 id="2-搭建本地个人博客"><a href="#2-搭建本地个人博客" class="headerlink" title="2. 搭建本地个人博客"></a>2. 搭建本地个人博客</h2>]]></content>
+    <content type="html"><![CDATA[<p>如果你和我一样是小白，从来没搭建过博客。那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！</p><a id="more"></a><h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><h2 id="搭建本地个人博客"><a href="#搭建本地个人博客" class="headerlink" title="搭建本地个人博客"></a>搭建本地个人博客</h2>]]></content>
     
     <summary type="html">
     
@@ -35,24 +61,6 @@
     
     
       <category term="hexo" scheme="https://tangguangzhen.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://tangguangzhen.github.io/2019/07/02/hello-world/"/>
-    <id>https://tangguangzhen.github.io/2019/07/02/hello-world/</id>
-    <published>2019-07-02T12:40:44.048Z</published>
-    <updated>2019-07-02T14:41:19.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
