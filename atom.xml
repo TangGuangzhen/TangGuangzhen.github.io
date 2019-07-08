@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangguangzhen.github.io/"/>
-  <updated>2019-07-07T06:14:43.344Z</updated>
+  <updated>2019-07-08T11:52:02.206Z</updated>
   <id>https://tangguangzhen.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统</title>
+    <link href="https://tangguangzhen.github.io/2019/07/08/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://tangguangzhen.github.io/2019/07/08/操作系统/</id>
+    <published>2019-07-08T09:28:34.000Z</published>
+    <updated>2019-07-08T11:52:02.206Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h1><p>区别联系：<br>1.进程是系统资源分配的最小单位，线程是程序执行的最小单位；<br>2.进程使用独立的数据空间，线程共享进程的数据空间。</p><h1 id="线程调度算法"><a href="#线程调度算法" class="headerlink" title="线程调度算法"></a>线程调度算法</h1><p>1.时间片轮转调度<br>2.先来先服务调度<br>3.优先级调度<br>4.多级反馈队列调度<br>5.高响应比优先调度</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;进程与线程&quot;&gt;&lt;a href=&quot;#进程与线程&quot; class=&quot;headerlink&quot; title=&quot;进程与线程&quot;&gt;&lt;/a&gt;进程与线程&lt;/h1&gt;&lt;p&gt;区别联系：&lt;br&gt;1.进程是系统资源分配的最小单位，线程是程序执行的最小单位；&lt;br&gt;2.进程使用独立的数据空间，线
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="https://tangguangzhen.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="操作系统" scheme="https://tangguangzhen.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux系统基本操作</title>
