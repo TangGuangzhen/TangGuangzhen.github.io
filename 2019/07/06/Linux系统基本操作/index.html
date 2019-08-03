@@ -513,7 +513,7 @@
 </blockquote>
 <h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>文本搜索 </p>
 <blockquote>
-<p>语法：grep 参数 查找条件 文件名（注：是文件名，目录名下查找不行）<br>主要参数：<br><strong>－i</strong>：不区分大小写(只适用于字母字符。）<br><strong>－l</strong>：查询多文件时只输出包含匹配字符的文件名。<br><strong>－n</strong>：显示匹配行内容及行号。<br>比如我的/opt目录下有文件test1.txt<br><strong>grep -i “teacher” test1.txt</strong> : 查询包含 teacher 文本的所有行并打印在屏幕上<br><strong>grep -l “teacher” test1.txt test2.txt</strong> : 在文件test1/test2中查找是否有“teacher”<br><strong>grep teacher *.txt</strong> : 显示当前目录下包含“teacher”且以.txt 结尾的文件（grep命令支持正则表达式，如  <strong>grep ‘[a-z]{7}‘ *.txt）</strong><br><strong>ps -ef | grep java</strong>：查找指定进程(这里指定java进程)<br><strong>ls -l | grep -i test</strong>：把ls -l的输出中包含字母test（不区分大小写）的内容输出 （如果查询的是目录可以使用正则表达式，但是文件不行） </p>
+<p>语法：grep 参数 查找条件 文件名（注：是文件名，目录名下查找不行）<br>主要参数：<br><strong>－i</strong>：不区分大小写(只适用于字母字符。）<br><strong>－l</strong>：查询多文件时只输出包含匹配字符的文件名。<br><strong>－n</strong>：显示匹配行内容及行号。<br>比如我的/opt目录下有文件test1.txt<br><strong>grep -i “teacher” test1.txt</strong> : 查询包含 teacher 文本的所有行并打印在屏幕上<br><strong>grep -l “teacher” test1.txt test2.txt</strong> : 在文件test1/test2中查找是否有“teacher”<br><strong>grep teacher *.txt</strong> : 显示当前目录下包含“teacher”且以.txt 结尾的文件（grep命令支持正则表达式，如  <strong>grep ‘[a-z]\{7\}’ *.txt）</strong><br><strong>ps -ef | grep java</strong>：查找指定进程(这里指定java进程)<br><strong>ls -l | grep -i test</strong>：把ls -l的输出中包含字母test（不区分大小写）的内容输出 （如果查询的是目录可以使用正则表达式，但是文件不行） </p>
 </blockquote>
 <h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><p>查找</p>
 <blockquote>
@@ -521,7 +521,7 @@
 </blockquote>
 <h2 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h2><p>创建指定的名称的目录</p>
 <blockquote>
-<p><strong>-m</strong>, –mode=模式，设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask<br><strong>-p</strong>, –parents  可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;<br><strong>mkdir test1</strong> ： 创建一个空目录<br><strong>mkdir -p test2/test22</strong> ：递归创建多个目录<br><strong>mkdir -m 777 test3</strong> ：创建权限为777的目录  </p>
+<p><strong>-m</strong>, —mode=模式，设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask<br><strong>-p</strong>, —parents  可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;<br><strong>mkdir test1</strong> ： 创建一个空目录<br><strong>mkdir -p test2/test22</strong> ：递归创建多个目录<br><strong>mkdir -m 777 test3</strong> ：创建权限为777的目录  </p>
 </blockquote>
 <h2 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h2><p>复制文件，还可以把多个文件一次性地复制到一个目录下</p>
 <blockquote>
@@ -566,9 +566,11 @@
 <h2 id="查看进程pid"><a href="#查看进程pid" class="headerlink" title="查看进程pid"></a>查看进程pid</h2><p>lsof -i:8080：根据端口查看进程pid:</p>
 <h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><p>面试官常问的十个linux问题<br><strong>1. 如何暂停一个正在运行的进程，把其放在后台（不运行）？</strong><br>答案：为了停止正在运行的进程，让其在后台运行，我们可以使用组合键 Ctrl+Z。</p>
 <p><strong>2. 什么是安装Linux所需的最小分区数量，以及如何查看系统启动信息？</strong><br>答案：单独一个/root分区足以执行所有的系统任务，但是强烈建议安装Linux时，需要至少三个分区：/root,/boot,/swap。一个IDE硬盘驱动器支持高达63个分区，SCSI硬盘驱动器支持超过15个分区。<br>为了检查启动信息，我们可以使用cat或者dmesg命令，如下所示：</p>
-<pre><code class="java">#cat /var/log/messages</code></pre>
+<pre><code class="lang-java">#cat /var/log/messages
+</code></pre>
 <p>或者</p>
-<pre><code class="java">#dmesg</code></pre>
+<pre><code class="lang-java">#dmesg
+</code></pre>
 <p><strong>3. 在你的Linux机器上跟踪系统事件的守护进程名是什么？</strong><br>答案：’syslogd’，它负责跟踪系统信息，并将跟踪日志存储在特定的日志文件里。</p>
 <p><strong>4. 在/root分区运行’fsck’命令的最低要求是什么？</strong><br>答案：/root分区必须挂载为只读模式，而不是读写模式</p>
 <p><strong>5. 如何分层复制/home目录到另一个目录？</strong><br>答案：Linux的’cpio’命令起到了效果。’cpio’可以分层地复制文件和目录层次结构到另一个位置。</p>
