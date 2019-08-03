@@ -2003,7 +2003,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bdc9ff;
+  background: #d9ff45;
 }
 .feed-link,
 .chat {
@@ -2392,6 +2392,10 @@ img:hover {
 }
 .highlight-wrap {
   position: relative;
+}
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .page-archive .archive-page-counter {
   position: relative;
