@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangguangzhen.github.io/"/>
-  <updated>2019-08-05T09:33:31.392Z</updated>
+  <updated>2019-08-05T12:17:27.538Z</updated>
   <id>https://tangguangzhen.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HashMap</title>
+    <link href="https://tangguangzhen.github.io/2019/08/05/HashMap/"/>
+    <id>https://tangguangzhen.github.io/2019/08/05/HashMap/</id>
+    <published>2019-08-05T12:15:04.000Z</published>
+    <updated>2019-08-05T12:17:27.538Z</updated>
+    
+    <content type="html"><![CDATA[<p>在JDK1.6，JDK1.7中，HashMap采用位桶+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。<br>而JDK1.8中，HashMap采用位桶+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找时间。<br><a id="more"></a></p><h1 id="HashMap的实现原理："><a href="#HashMap的实现原理：" class="headerlink" title="HashMap的实现原理："></a>HashMap的实现原理：</h1><p>首先有一个每个元素都是链表（可能表述不准确）的数组，当添加一个元素（key-value）时，就首先计算元素key的hash值，以此确定插入数组中的位置，但是可能存在同一hash值的元素已经被放在数组同一位置了，这时就添加到同一hash值的元素的后面，他们在数组的同一位置，但是形成了链表，同一个链表上的Hash值是相同的，所以说数组存放的是链表。而当链表长度太长时，链表就转换为红黑树，这样大大提高了查找的效率。</p><h1 id="加载因子（默认0-75）"><a href="#加载因子（默认0-75）" class="headerlink" title="加载因子（默认0.75）"></a>加载因子（默认0.75）</h1><h2 id="为什么需要使用加载因子，为什么需要扩容呢？"><a href="#为什么需要使用加载因子，为什么需要扩容呢？" class="headerlink" title="为什么需要使用加载因子，为什么需要扩容呢？"></a>为什么需要使用加载因子，为什么需要扩容呢？</h2><p>当链表数组的容量超过初始容量的0.75时，再散列将链表数组扩大2倍，把原链表数组的搬移到新的数组中.<br>因为如果填充比很大，说明利用的空间很多，如果一直不进行扩容的话，链表就会越来越长，这样查找的效率很低，因为链表的长度很大（当然最新版本使用了红黑树后会改进很多），扩容之后，将原来链表数组的每一个链表分成奇偶两个子链表分别挂在新链表数组的散列位置，这样就减少了每个链表的长度，增加查找效率</p><h1 id="为什么HashMap链表长度超过8会转成树结构？"><a href="#为什么HashMap链表长度超过8会转成树结构？" class="headerlink" title="为什么HashMap链表长度超过8会转成树结构？"></a>为什么HashMap链表长度超过8会转成树结构？</h1><p>HashMap在JDK1.8及以后的版本中引入了红黑树结构，若桶中链表元素个数大于等于8时，链表转换成树结构；若桶中链表元素个数小于等于6时，树结构还原成链表。因为红黑树的平均查找长度是log(n)，长度为8的时候，平均查找长度为3，如果继续使用链表，平均查找长度为8/2=4，这才有转换为树的必要。链表长度如果是小于等于6，6/2=3，虽然速度也很快的，但是转化为树结构和生成树的时间并不会太短。<br>还有选择6和8，中间有个差值7可以有效防止链表和树频繁转换。假设一下，如果设计成链表个数超过8则链表转换成树结构，链表个数小于8则树结构转换成链表，如果一个HashMap不停的插入、删除元素，链表个数在8左右徘徊，就会频繁的发生树转链表、链表转树，效率会很低。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在JDK1.6，JDK1.7中，HashMap采用位桶+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。&lt;br&gt;而JDK1.8中，HashMap采用位桶+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找时间。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="https://tangguangzhen.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="https://tangguangzhen.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>红黑树和AVL树的区别</title>
