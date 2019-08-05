@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[设计模式]]></title>
+    <url>%2F2019%2F08%2F05%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[单例模式单例模式的两种方式：一种是饿汉式，就是在类初始化的时候，创建对象，这种方式是线程安全的，在程序运行期间就这一个对象。另一种是懒汉式，懒汉式是在第一次使用时才创建对象，但是如果在多线程环境中要考虑线程安全问题。饿汉：饿了，饥不择食，系统一运行就创建对象，不考虑太多的问题；懒汉：就是懒，就是不想创建对象，即使运行创建对象，也要说一大堆的问题，什么多线程、安全，对象重复等问题。总之一句话：懒，就是不想创建。 饿汉式12345678910public class Singletion&#123; // 直接创建对象 private static final Singleton instance = new Singletion(); // 私有化构造函数 private Singletion()&#123;&#125; // 返回对象实例 public static Singletion getInstance()&#123; return instance; &#125;&#125; 懒汉式1234567891011121314151617public class Singletion&#123; // 声明变量 private static volatile Singletion instance = null; // 私有构造函数 private Singletion()&#123;&#125; // 提供对外方法 public static Singletion getSingletion()&#123; if(instance == null)&#123; synchronized(Singletion.class)&#123; if(instance == null)&#123; instance = new Singletion(); &#125; &#125; &#125; return instance; &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HashMap]]></title>
     <url>%2F2019%2F08%2F05%2FHashMap%2F</url>
     <content type="text"><![CDATA[在JDK1.6，JDK1.7中，HashMap采用位桶+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。而JDK1.8中，HashMap采用位桶+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找时间。 HashMap的实现原理：首先有一个每个元素都是链表（可能表述不准确）的数组，当添加一个元素（key-value）时，就首先计算元素key的hash值，以此确定插入数组中的位置，但是可能存在同一hash值的元素已经被放在数组同一位置了，这时就添加到同一hash值的元素的后面，他们在数组的同一位置，但是形成了链表，同一个链表上的Hash值是相同的，所以说数组存放的是链表。而当链表长度太长时，链表就转换为红黑树，这样大大提高了查找的效率。 加载因子（默认0.75）为什么需要使用加载因子，为什么需要扩容呢？当链表数组的容量超过初始容量的0.75时，再散列将链表数组扩大2倍，把原链表数组的搬移到新的数组中.因为如果填充比很大，说明利用的空间很多，如果一直不进行扩容的话，链表就会越来越长，这样查找的效率很低，因为链表的长度很大（当然最新版本使用了红黑树后会改进很多），扩容之后，将原来链表数组的每一个链表分成奇偶两个子链表分别挂在新链表数组的散列位置，这样就减少了每个链表的长度，增加查找效率 为什么HashMap链表长度超过8会转成树结构？HashMap在JDK1.8及以后的版本中引入了红黑树结构，若桶中链表元素个数大于等于8时，链表转换成树结构；若桶中链表元素个数小于等于6时，树结构还原成链表。因为红黑树的平均查找长度是log(n)，长度为8的时候，平均查找长度为3，如果继续使用链表，平均查找长度为8/2=4，这才有转换为树的必要。链表长度如果是小于等于6，6/2=3，虽然速度也很快的，但是转化为树结构和生成树的时间并不会太短。还有选择6和8，中间有个差值7可以有效防止链表和树频繁转换。假设一下，如果设计成链表个数超过8则链表转换成树结构，链表个数小于8则树结构转换成链表，如果一个HashMap不停的插入、删除元素，链表个数在8左右徘徊，就会频繁的发生树转链表、链表转树，效率会很低。]]></content>

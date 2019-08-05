@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tangguangzhen.github.io/"/>
-  <updated>2019-08-05T12:17:27.538Z</updated>
+  <updated>2019-08-05T14:40:16.076Z</updated>
   <id>https://tangguangzhen.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="https://tangguangzhen.github.io/2019/08/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://tangguangzhen.github.io/2019/08/05/设计模式/</id>
+    <published>2019-08-05T14:37:43.000Z</published>
+    <updated>2019-08-05T14:40:16.076Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><p>单例模式的两种方式：<br>一种是饿汉式，就是在类初始化的时候，创建对象，这种方式是线程安全的，在程序运行期间就这一个对象。<br>另一种是懒汉式，懒汉式是在第一次使用时才创建对象，但是如果在多线程环境中要考虑线程安全问题。<br>饿汉：饿了，饥不择食，系统一运行就创建对象，不考虑太多的问题；<br>懒汉：就是懒，就是不想创建对象，即使运行创建对象，也要说一大堆的问题，什么多线程、安全，对象重复等问题。总之一句话：懒，就是不想创建。</p><h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singletion</span></span>&#123;</span><br><span class="line"><span class="comment">// 直接创建对象</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton instance = <span class="keyword">new</span> Singletion();</span><br><span class="line"><span class="comment">// 私有化构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Singletion</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"><span class="comment">// 返回对象实例</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singletion <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> instance;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singletion</span></span>&#123;</span><br><span class="line"><span class="comment">// 声明变量</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Singletion instance = <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">// 私有构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Singletion</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"><span class="comment">// 提供对外方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singletion <span class="title">getSingletion</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line"><span class="keyword">synchronized</span>(Singletion.class)&#123;</span><br><span class="line"><span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">instance = <span class="keyword">new</span> Singletion();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> instance;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h1&gt;&lt;p&gt;单例模式的两种方式：&lt;br&gt;一种是饿汉式，就是在类初始化的时候，创建对象，这种方式是线程安全的，在程序运行期间就这一个对象。
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://tangguangzhen.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://tangguangzhen.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>HashMap</title>
